@@ -1,0 +1,16 @@
+﻿<Application x:Class="SomeWSRApp.WPF.Layer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SomeWSRApp.WPF.Layer"
+             StartupUri="/Views/Windows/LoginWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Views/ResourceDicionaries/ColorDictionary.xaml"/>
+                <ResourceDictionary Source="Views/ResourceDicionaries/BaseStylesDictionary.xaml"/>
+                <ResourceDictionary Source="Views/ResourceDicionaries/TextDictionary.xaml"/>
+                <ResourceDictionary Source="Views/ResourceDicionaries/ButtonsDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary> 
+    </Application.Resources>
+</Application>

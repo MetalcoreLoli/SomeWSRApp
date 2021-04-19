@@ -1,0 +1,69 @@
+﻿<Window x:Class="SomeWSRApp.WPF.Layer.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="clr-namespace:SomeWSRApp.WPF.Layer.ViewModels"
+        xmlns:local="clr-namespace:SomeWSRApp.WPF.Layer.Views"
+        Name="LoginWin"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Login Window" Height="600" Width="400">
+        
+    <Window.DataContext>
+        <vm:LogInViewModel x:Name="loginVM"/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="65"/>
+        </Grid.RowDefinitions>
+        <Grid 
+            Row="0"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            >
+            
+            <StackPanel
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+                <StackPanel Grid.Row = "0" Orientation="Horizontal">
+                    <Label Content="Login:"/>
+                    <TextBox x:Name="LoginBox" Text="{Binding Path=Login, Mode=OneWayToSource}"/>
+                </StackPanel>
+                <TextBlock Style="{StaticResource TextBlockToLine}"/>
+                <StackPanel Grid.Row = "1" Orientation="Horizontal">
+                    <Label Content="Password:"/>
+                    <PasswordBox 
+                        x:Name="PasswordBox" 
+                        />
+                </StackPanel>
+                <TextBlock Style="{StaticResource TextBlockToLine}"/>
+            </StackPanel>
+        </Grid>
+        
+        <Grid Row="1"
+              VerticalAlignment="Center"
+              >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button
+                Name="LoginButton"
+                Grid.Column = "0"
+                Content="Log In"
+                Style="{StaticResource MainStyleButton}"
+                Click="LogInButtonClick"
+                />
+            
+            <Button
+                Name="CloseButton"
+                Grid.Column="1"
+                Content="Close"
+                Style="{StaticResource MainStyleButton}"
+                Click="CloseButtonClick"
+                />
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,39 @@
+﻿<Page x:Class="SomeWSRApp.WPF.Layer.Views.Pages.ManagerSalesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:SomeWSRApp.WPF.Layer.Views.Pages"
+      xmlns:vm="clr-namespace:SomeWSRApp.WPF.Layer.ViewModels"
+      mc:Ignorable="d"
+      Title="ManagerSalesPage" Height="450" Width="800">
+    <Page.DataContext>
+        <vm:SalesPageViewModel x:Name="salesVM"></vm:SalesPageViewModel> 
+    </Page.DataContext>
+    <Grid>
+        <DataGrid
+            IsReadOnly="True"
+            AutoGenerateColumns="False"
+            SelectedItem="{Binding SelectedEntity}"
+            ItemsSource="{Binding SaleEntities}"
+            x:Name="SalesDataGrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+                    Header="Client" 
+                    Binding="{Binding Client}"/>
+                <DataGridTextColumn 
+                    Header="Status" 
+                    Binding="{Binding Status.Name}"/>
+                <DataGridTextColumn 
+                    Header="Date Of Creation" 
+                    Binding="{Binding DateOfCreation}"/>
+                <DataGridTextColumn 
+                    Header="Date Of Modification" 
+                    Binding="{Binding DateOfModification}"/>
+                <DataGridTextColumn 
+                    Header="Sum"
+                    Binding="{Binding Sum}"/>
+            </DataGrid.Columns>    
+        </DataGrid>
+    </Grid>
+</Page>

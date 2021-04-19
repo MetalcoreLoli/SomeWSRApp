@@ -1,0 +1,11 @@
+.idea
+.vs
+SomeWSRApp.WPF.Layer/bin
+SomeWSRApp.WinForms.Layer/bin
+
+SomeWSRApp.Domain/bin
+SomeWSRApp.Domain.Tests/bin
+
+SomeWSRApp.EF/bin
+SomeWSRApp.EF.Tests/bin
+

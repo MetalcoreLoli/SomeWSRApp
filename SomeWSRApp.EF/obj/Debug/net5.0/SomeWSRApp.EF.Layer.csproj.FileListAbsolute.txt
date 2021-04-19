@@ -1,0 +1,16 @@
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\bin\Debug\net5.0\SomeWSRApp.EF.Layer.dll.config
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\bin\Debug\net5.0\SomeWSRApp.EF.Layer.deps.json
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\bin\Debug\net5.0\SomeWSRApp.EF.Layer.runtimeconfig.json
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\bin\Debug\net5.0\SomeWSRApp.EF.Layer.runtimeconfig.dev.json
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\bin\Debug\net5.0\SomeWSRApp.EF.Layer.dll
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\bin\Debug\net5.0\ref\SomeWSRApp.EF.Layer.dll
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\bin\Debug\net5.0\SomeWSRApp.EF.Layer.pdb
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\obj\Debug\net5.0\SomeWSRApp.EF.Layer.csprojAssemblyReference.cache
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\obj\Debug\net5.0\SomeWSRApp.EF.Layer.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\obj\Debug\net5.0\SomeWSRApp.EF.Layer.AssemblyInfoInputs.cache
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\obj\Debug\net5.0\SomeWSRApp.EF.Layer.AssemblyInfo.cs
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\obj\Debug\net5.0\SomeWSRApp.EF.Layer.csproj.CoreCompileInputs.cache
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\obj\Debug\net5.0\SomeWSRApp.EF.Layer.dll
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\obj\Debug\net5.0\ref\SomeWSRApp.EF.Layer.dll
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\obj\Debug\net5.0\SomeWSRApp.EF.Layer.pdb
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.EF\obj\Debug\net5.0\SomeWSRApp.EF.Layer.genruntimeconfig.cache
