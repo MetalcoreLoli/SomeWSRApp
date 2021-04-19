@@ -9,3 +9,11 @@ SomeWSRApp.Domain.Tests/bin
 SomeWSRApp.EF/bin
 SomeWSRApp.EF.Tests/bin
 
+SomeWSRApp.WPF.Layer/obj
+SomeWSRApp.WinForms.Layer/obj
+
+SomeWSRApp.Domain/obj
+SomeWSRApp.Domain.Tests/obj
+
+SomeWSRApp.EF/obj
+SomeWSRApp.EF.Tests/obj
