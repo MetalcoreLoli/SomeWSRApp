@@ -1,4 +1,6 @@
-﻿namespace SomeWSRApp.Domain.Layer.Queries
+﻿using SomeWSRApp.Domain.Layer.Entities;
+
+namespace SomeWSRApp.Domain.Layer.Queries
 {
     public interface IQuery<out TResult>
     {

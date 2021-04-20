@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using SomeWSRApp.EF.Layer.Entities;
 
 namespace SomeWSRApp.EF.Layer
@@ -41,9 +43,19 @@ namespace SomeWSRApp.EF.Layer
             return _entity.Value.Set<TEntity>().Local.FirstOrDefault(selector);
         }
 
+        public async Task<TEntity> SelectEntityOfAsync<TEntity>(Func<TEntity, bool> selector) where TEntity : class
+        {
+            return await _entity.Value.Set<TEntity>().FindAsync(selector);
+        }
+
         public TEntity SelectEntityFirstOf<TEntity>() where TEntity : class
         {
             return _entity.Value.Set<TEntity>().Local.FirstOrDefault();
+        }
+
+        public async Task<TEntity> SelectEntityFirstOfAsync<TEntity>() where TEntity : class
+        {
+            return await _entity.Value.Set<TEntity>().FindAsync();
         }
     }
 }

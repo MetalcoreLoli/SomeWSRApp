@@ -1,4 +1,5 @@
 ﻿using SomeWSRApp.Domain.Layer.Queries;
+using SomeWSRApp.Domain.Layer.Services;
 using SomeWSRApp.WPF.Layer.Models;
 using SomeWSRApp.WPF.Layer.Models.Queries;
 using SomeWSRApp.WPF.Layer.Models.Services;
@@ -38,12 +39,11 @@ namespace SomeWSRApp.WPF.Layer.ViewModels
         }
 
         public RelayCommand LoginCommand =>
-            _loginCommand ??= new RelayCommand(obj =>
+            _loginCommand ??= new RelayCommand(async obj =>
                 {
-                    var managerWin = new CreateViewQuery<ManagerWindow>().Execute();
-                    var loginWin          = new TakeViewByNameQuery("LoginWin").Execute();
+                    var user = new UserAuthorizationQuery<DefaultAuthorizationService>(null).Execute();
                     
-                    managerWin.Show();
+                    var loginWin    = new TakeViewByNameQuery("LoginWin").Execute();
                     loginWin.Close();
                 }
             );

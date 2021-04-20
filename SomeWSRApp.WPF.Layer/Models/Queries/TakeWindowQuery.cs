@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
+using SomeWSRApp.Domain.Layer.Entities;
 using SomeWSRApp.Domain.Layer.Queries;
 
 namespace SomeWSRApp.WPF.Layer.Models.Queries
