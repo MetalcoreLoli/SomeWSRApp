@@ -8,7 +8,7 @@
         Name="LoginWin"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Login Window" Height="600" Width="400">
+        Title="Authorization Window" Height="600" Width="400">
         
     <Window.DataContext>
         <vm:LogInViewModel x:Name="loginVM"/>
@@ -34,11 +34,15 @@
                 <TextBlock Style="{StaticResource TextBlockToLine}"/>
                 <StackPanel Grid.Row = "1" Orientation="Horizontal">
                     <Label Content="Password:"/>
-                    <PasswordBox 
-                        x:Name="PasswordBox" 
+                    <PasswordBox
+                        x:Name="PasswordTextBox"
                         />
                 </StackPanel>
                 <TextBlock Style="{StaticResource TextBlockToLine}"/>
+                <StackPanel
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center">
+                </StackPanel>
             </StackPanel>
         </Grid>
         

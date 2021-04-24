@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace SomeWSRApp.WPF.Layer.Views
 {
@@ -8,7 +9,6 @@ namespace SomeWSRApp.WPF.Layer.Views
         {
             InitializeComponent();
         }
-
 
         private void CloseButtonClick(object sender, RoutedEventArgs e)
         {

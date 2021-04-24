@@ -22,7 +22,7 @@
         </Grid> 
         <Grid Grid.Column="1">
             <Frame x:Name = "ManagerFrame"
-                   Source="../Pages/ManagerSalesPage.xaml"></Frame>
+                   Source="../Pages/ManagerPages/ManagerSalesPage.xaml"></Frame>
         </Grid> 
           
     </Grid>
