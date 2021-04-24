@@ -17,7 +17,7 @@ namespace SomeWSRApp.Domain.Layer.Queries
             _entitiesContext = entitiesContext ?? throw new ArgumentNullException(nameof(entitiesContext));
         }
 
-        public async Task<UserEntity> Execute()
+        public async Task<UserEntity> ExecuteAsync()
         {
             _authorizationService =  Activator.CreateInstance(typeof(TAuthorizationService), _entitiesContext) as TAuthorizationService;
             return await _authorizationService.AuthorizeAsync("", "") as UserEntity;

@@ -41,7 +41,7 @@ namespace SomeWSRApp.WPF.Layer.ViewModels
         public RelayCommand LoginCommand =>
             _loginCommand ??= new RelayCommand(async obj =>
                 {
-                    var user = new UserAuthorizationQuery<DefaultAuthorizationService>(null).Execute();
+                    var user = await new UserAuthorizationQuery<DefaultAuthorizationService>(null).ExecuteAsync();
                     
                     var loginWin    = new TakeViewByNameQuery("LoginWin").Execute();
                     loginWin.Close();

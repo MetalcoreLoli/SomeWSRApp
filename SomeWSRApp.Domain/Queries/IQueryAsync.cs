@@ -4,6 +4,6 @@ namespace SomeWSRApp.Domain.Layer.Queries
 {
     public interface IQueryAsync<TResult>
     {
-        Task<TResult> Execute();
+        Task<TResult> ExecuteAsync();
     }
 }
