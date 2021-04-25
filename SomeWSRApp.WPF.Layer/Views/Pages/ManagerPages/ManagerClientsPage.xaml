@@ -17,15 +17,21 @@
         </Grid.RowDefinitions>
         <DataGrid
             Grid.Row="0"
+            ItemsSource="{Binding Clients}"
+            SelectedItem="{Binding SelectedClient}"
             AutoGenerateColumns="False"
+            IsReadOnly="True"
             >
             <DataGrid.Columns>
                 <DataGridTextColumn
-                    Header="First name"/>
+                    Header="First name"
+                    Binding="{Binding Name}"/>
                 <DataGridTextColumn
-                    Header="Last name"/>
+                    Header="Last name"
+                    Binding="{Binding LastName}"/>
                 <DataGridTextColumn
-                    Header="Source"/>
+                    Header="Source"
+                    Binding="{Binding Source.Name}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Grid

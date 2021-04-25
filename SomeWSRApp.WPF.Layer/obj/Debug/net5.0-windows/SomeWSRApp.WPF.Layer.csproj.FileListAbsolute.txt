@@ -66,3 +66,4 @@ D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.WPF.Layer\obj\Debug\net5.0-wind
 D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.WPF.Layer\obj\Debug\net5.0-windows\Views\Windows\AdminWindow.baml
 D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.WPF.Layer\obj\Debug\net5.0-windows\Views\Windows\ClientWindow.baml
 D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.WPF.Layer\obj\Debug\net5.0-windows\Views\Pages\AdminPages\AdminManagersPage.g.cs
+D:\projects\CSharp\WPF\SomeWSRApp.WPF\SomeWSRApp.WPF.Layer\bin\Debug\net5.0-windows\SomeWSRApp.WPF.Layer.dll.config
