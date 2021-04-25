@@ -16,12 +16,7 @@ namespace SomeWSRApp.WPF.Layer.ViewModels
         
         public SalesPageViewModel()
         {
-            using (var context = new EntityContext())
-            {
-                context.Sale.LoadAsync();
-                var sales = from sale in context.Sale.Local select SaleEntity.CreateFrom(sale);
-                SaleEntities = new ObservableCollection<SaleEntity>(sales);
-            }
+            SaleEntities = new ObservableCollection<SaleEntity>();
         }
 
         public string PagesCountFormat { get; set; } = "0 / 0";

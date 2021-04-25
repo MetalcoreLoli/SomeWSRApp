@@ -4,10 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SomeWSRApp.EF.Layer.Entities
 {
-    [Table("main.Category")]
+    [Table("Category")]
     public partial class Category
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Category()
         {
             CategoryHasProduct = new HashSet<CategoryHasProduct>();
@@ -21,7 +20,6 @@ namespace SomeWSRApp.EF.Layer.Entities
 
         public bool IsDelete { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CategoryHasProduct> CategoryHasProduct { get; set; }
     }
 }

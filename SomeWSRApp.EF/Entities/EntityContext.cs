@@ -12,8 +12,10 @@ namespace SomeWSRApp.EF.Layer.Entities
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<CategoryHasProduct> CategoryHasProduct { get; set; }
         public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<DataOfUser> DataOfUser { get; set; }
         public virtual DbSet<HistoryOfSaleStatusModification> HistoryOfSaleStatusModification { get; set; }
         public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Sale> Sale { get; set; }
         public virtual DbSet<SaleHasProduct> SaleHasProduct { get; set; }
         public virtual DbSet<Source> Source { get; set; }

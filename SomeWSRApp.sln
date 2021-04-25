@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SomeWSRApp.EF.Tests", "Some
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SomeWSRApp.WinForms.Layer", "SomeWSRApp.WinForms.Layer\SomeWSRApp.WinForms.Layer.csproj", "{C5983CB7-D03B-4A76-9EEF-7A21B00EAA79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeWSRApp.WPF.Layer", "SomeWSRApp.WPF.Layer\SomeWSRApp.WPF.Layer.csproj", "{5993A062-64B1-4644-8A5C-DC5DFBEA4559}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SomeWSRApp.WPF.Layer", "SomeWSRApp.WPF.Layer\SomeWSRApp.WPF.Layer.csproj", "{5993A062-64B1-4644-8A5C-DC5DFBEA4559}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

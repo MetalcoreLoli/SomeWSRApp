@@ -24,8 +24,8 @@ namespace SomeWSRApp.Domain.Layer.Entities
                 .WasModifiedAt(sale.DateOfModification)
                 .WithClient(clientBuilder =>
                     clientBuilder
-                        .Called(sale.Client.FirstName).WithLastName(sale.Client.LastName)
-                        .FromSource(new SourceEntity(sale.Client.SourceId, sale.Client.Source.Name))
+                        .Called(sale.Client.DataOfUser.FirstName).WithLastName(sale.Client.DataOfUser.LastName)
+                        .FromSource(new SourceEntity(sale.Client.DataOfUser.SourceId, sale.Client.Source.Name))
                         .WithId(sale.ClientId))
                 .WithStatus(new StatusEntity() {Name = sale.StatusOfSale.Name, Id = sale.StatusOfSale.Id});
             return builder.Construct();

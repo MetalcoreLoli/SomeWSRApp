@@ -4,10 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SomeWSRApp.EF.Layer.Entities
 {
-    [Table("main.Source")]
+    [Table("Source")]
     public partial class Source
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Source()
         {
             Client = new HashSet<Client>();
@@ -21,7 +20,6 @@ namespace SomeWSRApp.EF.Layer.Entities
 
         public bool IsDelete { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Client> Client { get; set; }
     }
 }

@@ -4,10 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SomeWSRApp.EF.Layer.Entities
 {
-    [Table("main.StatusOfSale")]
+    [Table("StatusOfSale")]
     public partial class StatusOfSale
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public StatusOfSale()
         {
             HistoryOfSaleStatusModification = new HashSet<HistoryOfSaleStatusModification>();
@@ -22,10 +21,8 @@ namespace SomeWSRApp.EF.Layer.Entities
 
         public bool IsDelete { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HistoryOfSaleStatusModification> HistoryOfSaleStatusModification { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Sale> Sale { get; set; }
     }
 }

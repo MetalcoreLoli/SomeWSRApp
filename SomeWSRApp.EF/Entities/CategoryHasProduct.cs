@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SomeWSRApp.EF.Layer.Entities
 {
-    [Table("main.CategoryHasProduct")]
+    [Table("CategoryHasProduct")]
     public partial class CategoryHasProduct
     {
         [Key]

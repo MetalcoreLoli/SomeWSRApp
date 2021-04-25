@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SomeWSRApp.EF.Layer.Entities
 {
-    [Table("main.HistoryOfSaleStatusModification")]
+    [Table("HistoryOfSaleStatusModification")]
     public partial class HistoryOfSaleStatusModification
     {
         public int Id { get; set; }
