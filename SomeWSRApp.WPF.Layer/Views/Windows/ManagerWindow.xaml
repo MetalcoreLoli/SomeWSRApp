@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Name="ManagerWin"
-        Title="Window of Manager" Height="650" Width="596">
+        Title="Window of Manager" Height="550" Width="750">
     <Window.DataContext>
         <vm:ManagerViewModel x:Name="managerVM"/>
     </Window.DataContext>
@@ -23,15 +23,15 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0">
+            <StackPanel Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
                 <Button
-                    Style="{StaticResource MainStyleWarningButton}"
-                    Content="Sales"/>
-                <Button
-                    Style="{StaticResource MainStyleWarningButton}"
+                    Style="{StaticResource MainStyleButton}"
                     Content="Add new client"/>
                 <Button 
-                    Style="{StaticResource MainStyleWarningButton}"
+                    Margin="0 5 0 0"
+                    Style="{StaticResource MainStyleButton}"
                     Content="Add new sale"/>
             </StackPanel>
             <Grid Grid.Row="1"
