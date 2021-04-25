@@ -25,7 +25,7 @@ namespace SomeWSRApp.Domain.Layer.Entities
                 .WithClient(clientBuilder =>
                     clientBuilder
                         .Called(sale.Client.DataOfUser.FirstName).WithLastName(sale.Client.DataOfUser.LastName)
-                        .FromSource(new SourceEntity(sale.Client.DataOfUser.SourceId, sale.Client.Source.Name))
+                        .FromSource(new SourceEntity(sale.Client.Source.Id, sale.Client.Source.Name))
                         .WithId(sale.ClientId))
                 .WithStatus(new StatusEntity() {Name = sale.StatusOfSale.Name, Id = sale.StatusOfSale.Id});
             return builder.Construct();

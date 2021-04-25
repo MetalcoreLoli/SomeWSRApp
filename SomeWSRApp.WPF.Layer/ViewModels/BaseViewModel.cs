@@ -11,7 +11,6 @@ namespace SomeWSRApp.WPF.Layer.ViewModels
     {
         protected void SetProperty<T>([NotNull] ref T source, T value, [CallerMemberName] string prop = null!)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
             source = value;
             OnPropertyChanged(prop);
         }

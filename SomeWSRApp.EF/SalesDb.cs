@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using SomeWSRApp.EF.Layer.Entities;
 
@@ -43,9 +44,9 @@ namespace SomeWSRApp.EF.Layer
             return _entity.Value.Set<TEntity>().Local.FirstOrDefault(selector);
         }
 
-        public async Task<TEntity> SelectEntityOfAsync<TEntity>(Func<TEntity, bool> selector) where TEntity : class
+        public async Task<TEntity> SelectEntityOfAsync<TEntity>(Expression<Func<TEntity, bool>> selector) where TEntity : class
         {
-            return await _entity.Value.Set<TEntity>().FindAsync(selector);
+            return await _entity.Value.Set<TEntity>().FirstOrDefaultAsync(selector);
         }
 
         public TEntity SelectEntityFirstOf<TEntity>() where TEntity : class

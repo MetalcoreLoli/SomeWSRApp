@@ -4,6 +4,8 @@ using SomeWSRApp.WPF.Layer.Models;
 using SomeWSRApp.WPF.Layer.Models.Queries;
 using SomeWSRApp.WPF.Layer.Models.Services;
 using SomeWSRApp.WPF.Layer.Views;
+using SomeWSRApp.WPF.Layer.Views.Windows;
+using System;
 
 namespace SomeWSRApp.WPF.Layer.ViewModels
 {
@@ -42,10 +44,29 @@ namespace SomeWSRApp.WPF.Layer.ViewModels
             _loginCommand ??= new RelayCommand(async obj =>
                 {
                     //var user = await new UserAuthorizationQuery<DefaultAuthorizationService>(null).ExecuteAsync();
+                    //switch (user.Role)
+                    //{
+                    //    case Domain.Layer.Entities.Role.Admin:
+                    //        var adminWin = new CreateViewQuery<AdminWindow>().Execute();
+                    //        adminWin.Show();
+                    //        break;
+                    //    case Domain.Layer.Entities.Role.Client:
+                    //        var clientWin = new CreateViewQuery<ClientWindow>().Execute();
+                    //        clientWin.Show();
+                    //        break;
+                    //    case Domain.Layer.Entities.Role.Manager:
+                    //        var managerWin = new CreateViewQuery<ManagerWindow>().Execute();
+                    //        managerWin.Show();
+                    //        break;
+                    //    default:
+                    //        throw new ArgumentOutOfRangeException();
+                    //}
+
 
                     var managerWin = new CreateViewQuery<ManagerWindow>().Execute();
-                    var loginWin    = new TakeViewByNameQuery("LoginWin").Execute();
                     managerWin.Show();
+
+                    var loginWin    = new TakeViewByNameQuery("LoginWin").Execute();
                     loginWin.Close();
                 }
             );

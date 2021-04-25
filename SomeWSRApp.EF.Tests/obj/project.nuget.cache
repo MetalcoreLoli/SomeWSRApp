@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aVdc8bSLl5ExX6W2/Tw6io6C1JePdrHWjWyxh6BauokvTAAg26PqIba+hC4NommFlFa0VtsdRMJTrYXRXOKSKQ==",
+  "dgSpecHash": "Y8YY11ebpI41UbrnOrXW8lPpVdQ0gdSH7753uPo0/6UrzB1jf2rBhF0KP+g1KEvI5p05mSyMdkERE+7+gzxPKQ==",
   "success": true,
   "projectFilePath": "D:\\projects\\CSharp\\WPF\\SomeWSRApp.WPF\\SomeWSRApp.EF.Tests\\SomeWSRApp.EF.Tests.csproj",
   "expectedPackageFiles": [

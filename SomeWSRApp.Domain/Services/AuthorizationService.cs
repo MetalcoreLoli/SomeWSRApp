@@ -15,7 +15,6 @@ namespace SomeWSRApp.Domain.Layer.Services
 
         public override async Task<Entity> AuthorizeAsync(string login, string password)
         {
-            throw new NotImplementedException("Method is not implemented yet");
             var user = await _entitiesContext.SelectEntityOfAsync<UserEntity>(u => u.Login == login && u.Password == password);
             
             return user;
