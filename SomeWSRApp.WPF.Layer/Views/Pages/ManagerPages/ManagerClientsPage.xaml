@@ -4,9 +4,68 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:SomeWSRApp.WPF.Layer.Views.Pages.ManagerPages"
+      xmlns:vm="clr-namespace:SomeWSRApp.WPF.Layer.ViewModels"
       mc:Ignorable="d"
-      Title="ManagerClientsPage" Height="450" Width="800">
+      Title="Clients" Height="450" Width="550">
+    <Page.DataContext>
+        <vm:ClientPageViewModel x:Name="clientsVM"/>
+    </Page.DataContext>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="95"/>
+        </Grid.RowDefinitions>
+        <DataGrid
+            Grid.Row="0"
+            AutoGenerateColumns="False"
+            >
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="First name"/>
+                <DataGridTextColumn
+                    Header="Last name"/>
+                <DataGridTextColumn
+                    Header="Source"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid
+            Grid.Row="1">
+            <StackPanel
+                Orientation="Horizontal">
+                <Label 
+                    Width="75"
+                    Style="{StaticResource BaseSizes}"
+                       Content="FIO Filter:"/>
+                <StackPanel>
+                    <Label
+                        Content="first name filter"
+                        Style="{StaticResource BaseSizes}"/>
+                    <ComboBox
+                        
+                        Style="{StaticResource BaseSizes}"/>
+                </StackPanel>
+                <StackPanel
+                    Margin="5 0 5 0">
+                    <Label
+                        Content="last name filter"
+                        Style="{StaticResource BaseSizes}"/>
+                    <ComboBox
+                        Style="{StaticResource BaseSizes}"/>
+                </StackPanel>
+                <Grid
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+                    <StackPanel>
+                        <Button
+                        Content="Clear"
+                        Style="{StaticResource MainStyleButton}"/>
+                        <Button
+                        Content="Apply"
+                        Style="{StaticResource MainStyleButton}"/>
+                    </StackPanel>
+                </Grid>
+
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>
