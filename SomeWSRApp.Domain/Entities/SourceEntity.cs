@@ -2,8 +2,14 @@
 
 namespace SomeWSRApp.Domain.Layer.Entities
 {
-    public class SourceEntity : Entity
+    public sealed class SourceEntity : Entity
     {
+        public SourceEntity(int id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+
         public string Name { get; set; }
     }
 }

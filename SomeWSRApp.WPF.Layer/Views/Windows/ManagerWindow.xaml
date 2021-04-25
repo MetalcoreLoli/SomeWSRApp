@@ -7,18 +7,36 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Name="ManagerWin"
-        Title="ManagerWindow" Height="450" Width="800">
+        Title="Window of Manager" Height="650" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="185"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid>
-            <StackPanel>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
                 <Button
                     Style="{StaticResource MainStyleWarningButton}"
                     Content="Sales"/>
+                <Button
+                    Style="{StaticResource MainStyleWarningButton}"
+                    Content="Add new client"/>
+                <Button 
+                    Style="{StaticResource MainStyleWarningButton}"
+                    Content="Add new sale"/>
             </StackPanel>
+            <Grid Grid.Row="1"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Bottom">
+               <Button
+                   Margin="5"
+                   Style="{StaticResource MainStyleButton}"
+                   Content="Back"/> 
+            </Grid>
         </Grid> 
         <Grid Grid.Column="1">
             <Frame x:Name = "ManagerFrame"

@@ -1,10 +1,22 @@
-﻿namespace SomeWSRApp.Domain.Layer.Queries
+﻿using System;
+
+namespace SomeWSRApp.Domain.Layer.Queries
 {
     public class CreateViewQuery<TView> : IQuery<TView> where TView: new ()
     {
-        public TView Execute()
+
+        private readonly Action<TView> _onCreating;
+
+        public CreateViewQuery(Action<TView> onCreating = null!)
         {
-            return new TView();
+            _onCreating = onCreating;
+        }
+
+        public virtual TView Execute()
+        {
+            var view = new TView();
+            _onCreating?.Invoke(view);
+            return view;
         }
     }
 }

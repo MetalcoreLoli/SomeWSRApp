@@ -1,5 +1,7 @@
 ﻿using System;
+using SomeWSRApp.Domain.Layer.Builders;
 using SomeWSRApp.EF.Layer;
+using SomeWSRApp.EF.Layer.Entities;
 
 namespace SomeWSRApp.Domain.Layer.Entities
 {
@@ -12,5 +14,21 @@ namespace SomeWSRApp.Domain.Layer.Entities
         public DateTime DateOfModification { get; set; }
         
         public decimal Sum { get; set; }
+
+        public static SaleEntity CreateFrom(Sale sale)
+        {
+            var builder = new SaleBuilder();
+            builder
+                .WithSum(sale.Sum)
+                .WasCreatedAt(sale.DataOfCreation)
+                .WasModifiedAt(sale.DateOfModification)
+                .WithClient(clientBuilder =>
+                    clientBuilder
+                        .Called(sale.Client.FirstName).WithLastName(sale.Client.LastName)
+                        .FromSource(new SourceEntity(sale.Client.SourceId, sale.Client.Source.Name))
+                        .WithId(sale.ClientId))
+                .WithStatus(new StatusEntity() {Name = sale.StatusOfSale.Name, Id = sale.StatusOfSale.Id});
+            return builder.Construct();
+        }
     }
 }

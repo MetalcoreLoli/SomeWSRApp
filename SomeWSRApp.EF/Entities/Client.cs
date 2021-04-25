@@ -15,7 +15,7 @@ namespace SomeWSRApp.EF.Layer.Entities
 
         public int Id { get; set; }
 
-        public int? SourceId { get; set; }
+        public int SourceId { get; set; }
 
         [Required]
         [StringLength(25)]

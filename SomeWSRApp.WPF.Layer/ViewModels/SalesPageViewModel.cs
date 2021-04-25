@@ -1,5 +1,9 @@
 ﻿using System.Collections.ObjectModel;
+using System.Data.Entity;
+using System.Linq;
 using SomeWSRApp.Domain.Layer.Entities;
+using SomeWSRApp.EF.Layer;
+using SomeWSRApp.EF.Layer.Entities;
 
 namespace SomeWSRApp.WPF.Layer.ViewModels
 {
@@ -7,17 +11,22 @@ namespace SomeWSRApp.WPF.Layer.ViewModels
     {
         #region Private Members
 
-        private readonly ObservableCollection<SaleEntity> _saleEntities;
-
         private SaleEntity _selectedEntity;
         #endregion
         
         public SalesPageViewModel()
         {
-            _saleEntities = new ObservableCollection<SaleEntity>();
+            using (var context = new EntityContext())
+            {
+                context.Sale.LoadAsync();
+                var sales = from sale in context.Sale.Local select SaleEntity.CreateFrom(sale);
+                SaleEntities = new ObservableCollection<SaleEntity>(sales);
+            }
         }
 
-        public ObservableCollection<SaleEntity> SaleEntities => _saleEntities;
+        public string PagesCountFormat { get; set; } = "0 / 0";
+        public ObservableCollection<SaleEntity> SaleEntities { get; }
+        public ObservableCollection<SaleEntity> PageBuffer { get; }
 
         public SaleEntity SelectedEntity
         {
